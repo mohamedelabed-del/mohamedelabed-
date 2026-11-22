@@ -1,0 +1,60 @@
+/* Cap Bon Explorer — identité graphique personnelle */
+:root{--mer:#0b4f6c;--mer-clair:#2a9d8f;--terre:#b84a33;--terre-fonce:#963a27;--sable:#f7f1e5;--encre:#1d2b36}
+body{background:var(--sable);color:var(--encre);font-family:"Segoe UI",system-ui,sans-serif;line-height:1.6}
+h1,h2,h3,.navbar-brand{font-family:Georgia,"Times New Roman",serif}
+h2{color:var(--mer);margin-bottom:1.2rem}
+h2::after{content:"";display:block;width:60px;height:4px;margin-top:.4rem;background:var(--terre);border-radius:2px}
+a{color:var(--mer)}
+:focus-visible{outline:3px solid var(--terre);outline-offset:2px}
+
+/* En-tête / navbar */
+.site-header .navbar{background:var(--mer);box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.navbar-brand{font-weight:700;letter-spacing:.5px}
+.navbar .nav-link{border-bottom:3px solid transparent;transition:border-color .25s,color .25s}
+.navbar .nav-link:hover,.navbar .nav-link:focus{border-bottom-color:var(--terre);color:#fff}
+.navbar .nav-link.active{border-bottom-color:#f4c27a;font-weight:600}
+
+/* Bannière */
+.hero{background:linear-gradient(rgba(11,79,108,.65),rgba(11,79,108,.75)),url(../images/banniere.svg) center/cover;color:#fff;padding:6rem 0}
+.hero h1{font-size:3rem}
+.page-titre{background:linear-gradient(120deg,var(--mer),var(--mer-clair));color:#fff;padding:2.5rem 0}
+.page-titre h1{margin:0}
+
+/* Boutons */
+.btn-cap{background:var(--terre);color:#fff;border:0;border-radius:2rem;padding:.55rem 1.4rem;transition:background .25s,transform .25s}
+.btn-cap:hover,.btn-cap:focus{background:var(--terre-fonce);color:#fff;transform:translateY(-2px)}
+.btn-filtre{border-color:var(--mer);color:var(--mer)}
+.btn-filtre.active,.btn-filtre:hover{background:var(--mer);color:#fff}
+
+/* Cartes */
+.carte-activite{border:0;border-radius:1rem;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.12);transition:transform .3s,box-shadow .3s}
+.carte-activite:hover{transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,.2)}
+.carte-activite .card-img-top{aspect-ratio:16/10;object-fit:cover}
+.badge-cat{background:var(--mer-clair);color:#fff;font-weight:500}
+.prix{color:var(--terre);font-weight:700;font-size:1.1rem}
+
+/* Divers */
+.atouts li{margin-bottom:.5rem}
+.cta{background:var(--mer);color:#fff;border-radius:1rem;padding:2.5rem;text-align:center}
+.table thead th{background:var(--mer);color:#fff}
+#recap{border-left:6px solid var(--mer-clair)}
+#panneauPrix{position:sticky;top:1rem;border-top:6px solid var(--terre)}
+.accordion-button:not(.collapsed){background:#e3f1ef;color:var(--mer)}
+
+/* Pied de page */
+.site-footer{background:var(--encre);color:#e8e8e8;padding:2rem 0;margin-top:3rem}
+.site-footer a{color:#f4c27a;text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .list-inline-item:not(:last-child)::after{content:"·";margin-left:.6rem;color:#888}
+
+@media (max-width:576px){
+  .hero{padding:3rem 0}.hero h1{font-size:2rem}
+  .cta{padding:1.5rem}
+  #panneauPrix{position:static}
+}
+
+/* Accessibilité : pas d'animation si l'utilisateur la refuse */
+@media (prefers-reduced-motion: reduce){
+  .carte-activite,.btn-cap,.navbar .nav-link{transition:none}
+  .carte-activite:hover{transform:none}
+}

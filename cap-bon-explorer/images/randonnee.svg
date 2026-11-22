@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2d6a4f"/><stop offset="1" stop-color="#95d5b2"/></linearGradient></defs>
+<rect width="800" height="500" fill="url(#g)"/><circle cx="624.0" cy="125.0" r="60.0" fill="#fff" opacity=".6"/>
+<path d="M0 375.0 Q200.0 250.0 400.0 360.0 T800 325.0 V500 H0Z" fill="#000" opacity=".22"/>
+<path d="M0 440.0 Q240.0 350.0 480.0 430.0 T800 400.0 V500 H0Z" fill="#000" opacity=".3"/>
+<text x="400.0" y="225.0" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#fff" font-weight="bold">Randonnée découverte</text></svg>
